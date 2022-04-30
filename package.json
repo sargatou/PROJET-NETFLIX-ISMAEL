@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sargatou/PROJET-NETFLIX-ISMAEL#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
     "parcel": "^2.5.0"
   }
 }
