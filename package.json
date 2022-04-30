@@ -1,0 +1,24 @@
+{
+  "name": "projet-netflix-ismael",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "parcel src/index.html src/post.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sargatou/PROJET-NETFLIX-ISMAEL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sargatou/PROJET-NETFLIX-ISMAEL/issues"
+  },
+  "homepage": "https://github.com/sargatou/PROJET-NETFLIX-ISMAEL#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
