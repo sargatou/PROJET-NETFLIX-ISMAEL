@@ -32,50 +32,50 @@ header {
   height: 60%;
   margin: 0.58rem;
 }
-.recherche__zone {
-  background-color: white;
-  width: 450px;
-  height: 5%;
-  border-radius: 10px;
-  // text-align: center;
-  // left: 100rem;
-  // margin: 0.3rem;
-  position: fixed;
-  // padding-right: 302px;
-  padding-left: 158px;
-  top: 7px;
-  margin-left: 576px;
-}
-.recherche__icone {
-  width: 31px;
-  height: 4%;
-  margin-left: 982px;
-  position: fixed;
-  top: 10px;
-}
-.menu {
-  // position: fixed;
-  //   // align-items: center;
-  cursor: pointer;
-  margin: 0.5rem 1rem;
-}
+// .recherche__zone {
+//   background-color: white;
+//   width: 450px;
+//   height: 5%;
+//   border-radius: 10px;
+//   // text-align: center;
+//   // left: 100rem;
+//   // margin: 0.3rem;
+//   position: fixed;
+//   // padding-right: 302px;
+//   padding-left: 158px;
+//   top: 7px;
+//   margin-left: 576px;
+// }
+// .recherche__icone {
+//   width: 31px;
+//   height: 4%;
+//   margin-left: 982px;
+//   position: fixed;
+//   top: 10px;
+// }
+// .menu {
+//   // position: fixed;
+//   //   // align-items: center;
+//   cursor: pointer;
+//   margin: 0.5rem 1rem;
+// }
 
-.menu__text {
-  color: white;
-  font-size: 15px;
-  position: fixed;
-  // height: 7%;
-  //   cursor: pointer;
-}
-.menu__icone {
-  width: 24px;
-  height: 3%;
-  position: fixed;
-  // margin-left: 200px;
-  top: 7px;
-  // margin: 0.3rem;
-  //   cursor: pointer;
-}
+// .menu__text {
+//   color: white;
+//   font-size: 15px;
+//   position: fixed;
+//   // height: 7%;
+//   //   cursor: pointer;
+// }
+// .menu__icone {
+//   width: 24px;
+//   height: 3%;
+//   position: fixed;
+//   // margin-left: 200px;
+//   top: 7px;
+//   // margin: 0.3rem;
+//   //   cursor: pointer;
+// }
 .container {
   position: relative;
   margin: 60px 5px;
@@ -106,7 +106,7 @@ header {
   text-transform: capitalize;
   color: white;
 }
-.movie_category ::-webkit-scrollbar {
+.movie_container ::-webkit-scrollbar {
   display: none;
 }
 .movie_container {
@@ -116,20 +116,21 @@ header {
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-// .pre_btn,
-// next_btn{
-//   position: absolute;
-//   height: 200px;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   width: 2.5vw;
-//   background: black;
-//   border: none;
-//   outline: none;
-// }
+.pre_btn,
+.next_btn {
+  position: absolute;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5vw;
+  background: black;
+  border: none;
+  outline: none;
+  z-index: 6;
+}
 .movie {
   flex: 0 0 auto;
   width: 24%;
@@ -148,4 +149,17 @@ header {
   text-transform: capitalize;
   height: 20px;
   overflow: hidden;
+}
+.pre_btn {
+  left: -2.5vw;
+}
+.next_btn {
+  right: -2.5vw;
+}
+.pre_btn img,
+.next_btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  // z-index: 6;
 }

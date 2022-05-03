@@ -1,13 +1,15 @@
-let API_KEY = "a4880995fbb07d40249df7d0c03c8383";
+let api_key = "a4880995fbb07d40249df7d0c03c8383";
 let IMG_URL = "https://image.tmdb.org/t/p/w500";
+// let IMG_URL = "https://image.tmdb.org/t/p/original";
 let genres_list_http = "https://api.themoviedb.org/3/genre/movie/list?";
 let moviesGenres_http = "https://api.themoviedb.org/3/discover/movie?";
+// let moviesDetail_http = "https://api.themoviedb.org/3/movie";
 let $container = document.querySelector(".container");
 
 fetch(
   genres_list_http +
     new URLSearchParams({
-      api_key: API_KEY,
+      api_key: api_key,
     })
 )
   .then((repsonse) => {
@@ -23,7 +25,7 @@ const fetchMoviesListByGenres = (id, genres) => {
   fetch(
     moviesGenres_http +
       new URLSearchParams({
-        api_key: API_KEY,
+        api_key: api_key,
         with_genres: id,
         page: Math.floor(Math.random() * 3) + 1,
       })
@@ -37,21 +39,26 @@ const fetchMoviesListByGenres = (id, genres) => {
 
 let makeCategoryElement = (category, data) => {
   $container.innerHTML += `
+    
     <div class="movie_list">
 
-      
+            <button class="pre_btn">
+             <img src="/img/th(6).jpg" alt="fleche-de-direction-droite" />
+            </button>
 
-        <h1 class="movie_category"> ${category} </h1>
+            <h1 class="movie_category"> ${category} </h1>
 
-        <div class="movie_container" id="${category}">
+            <div class="movie_container" id="${category}">
 
-        </div>
+            </div>
 
-        
+            <button class="next_btn">
+            <img src="/img/th(7).jpg" alt="fleche-de-direction-gauche" />
+            </button>
 
     </div>
 
-  `;
+   `;
 
   makeCards(category, data);
 };
@@ -66,11 +73,17 @@ const makeCards = (id, data) => {
       }
     }
     moviesContainer.innerHTML += `
-        <div class="movie">
+        <div class="movie" onclick=" location.href = '/${item.id}'">
             <img class="movie_img" src="${IMG_URL}${item.backdrop_path}"alt="">
             <p class="movie_tille">${item.title}</p>
         </div>
          
         `;
+
+    if (i == data.length - 1) {
+      setTimeout(() => {
+        setupScroll();
+      }, 100);
+    }
   });
 };
